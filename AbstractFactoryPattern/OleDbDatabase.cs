@@ -18,6 +18,7 @@ namespace AbstractFactoryPattern
                 if (_Connection == null)
                 {
                     string connectionString = ConfigurationManager.ConnectionStrings["OleDbConnectionString"].ConnectionString;
+                    _Connection = new OleDbConnection(connectionString);
                 }
                 return _Connection;
             }

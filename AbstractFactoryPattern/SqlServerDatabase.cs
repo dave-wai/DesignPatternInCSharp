@@ -21,8 +21,7 @@ namespace AbstractFactoryPattern
                 }
                 return _Connection;
             }
-            set
-            {
+            set {
                 _Connection = value;
             }
         }
@@ -34,7 +33,7 @@ namespace AbstractFactoryPattern
                 if (_Command == null)
                 {
                     _Command = new SqlCommand();
-                    _Command.Connection = Connection;
+                    _Command.Connection = _Connection;
                 }
                 return _Command;
             }
