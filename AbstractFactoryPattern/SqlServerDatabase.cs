@@ -33,7 +33,7 @@ namespace AbstractFactoryPattern
                 if (_Command == null)
                 {
                     _Command = new SqlCommand();
-                    _Command.Connection = _Connection;
+                    _Command.Connection = Connection;
                 }
                 return _Command;
             }
